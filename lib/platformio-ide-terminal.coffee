@@ -36,6 +36,11 @@ module.exports =
           description: 'Run text inserted via `platformio-ide-terminal:insert-text` as a command? **This will append an end-of-line character to input.**'
           type: 'boolean'
           default: true
+        showIconsRight:
+          title: 'Show Menu on Right'
+          description: 'Show the terminal launch icons on the right side of the status bar. **Restart required**'
+          type: 'boolean'
+          default: false
     core:
       type: 'object'
       order: 2

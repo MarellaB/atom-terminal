@@ -268,7 +268,10 @@ class StatusBar extends View
     @activeTerminal.toggle()
 
   attach: ->
-    @statusBarProvider.addLeftTile(item: this, priority: -93)
+    if atom.config.get('platformio-ide-terminal.toggles.showIconsRight')
+      @statusBarProvider.addRightTile(item: this, priority: -93)
+    else
+      @statusBarProvider.addLeftTile(item: this, priority: -93)
 
   destroyActiveTerm: ->
     return unless @activeTerminal?
